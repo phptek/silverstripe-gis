@@ -1,4 +1,4 @@
-<div style="float:right; background:url() white; border:1px solid black;padding:1em 1em 0 0;">
+<div align="right">
 
 - [Features](#features)
 - [Requirements](requirements.md)
@@ -15,9 +15,9 @@
 
 </div>
 
-# [SilverStripe GIS Module](../../README.md)
+# [SilverStripe GIS Module](../../.)
 
-[Home](../../README.md) > Requirements
+[Home](../../.) > Requirements
 
 ## Requirements
 
