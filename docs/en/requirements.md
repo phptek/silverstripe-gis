@@ -1,4 +1,4 @@
-<div align="right">
+<h1>SilverStripe GIS Module</h1><div align="right">
 
 - [Features](#features)
 - [Requirements](requirements.md)
