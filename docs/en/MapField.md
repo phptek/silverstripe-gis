@@ -18,8 +18,8 @@ MapField::$default_location = [
     'lat' => $lat = (float)-41.29
 ]
 ```
-__$lon__ is the default location's longitude as a float
-__$lat__ is it's latitude as a float
+- __$lon__ is the default location's longitude as a float
+- __$lat__ is it's latitude as a float
 
 ## Methods
 
