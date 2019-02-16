@@ -1,4 +1,4 @@
-# SilverStripe GIS Module
+#  :globe_with_meridians: SilverStripe GIS Module
 
 [![Build Status](https://travis-ci.org/smindel/silverstripe-gis.svg?branch=master)](https://travis-ci.org/smindel/silverstripe-gis)
 [![Version](http://img.shields.io/packagist/v/smindel/silverstripe-gis.svg?style=flat)](https://packagist.org/packages/smindel/silverstripe-gis)
@@ -306,7 +306,7 @@ or
         ],
     ];
 
-you can acces the endpoint:
+you can access the endpoint:
 
     http://yourdomain/geojsonservice/CLASS?QUERY
 
