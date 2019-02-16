@@ -8,7 +8,15 @@ Form field for editing geometries.
 
 ## Configuration
 
-#### Smindel\GIS\Forms\MapField::$default_location
+#### private static Smindel\GIS\Forms\MapField::$default_location = array
+
+```php
+MapField::$default_location = [
+    'lon' => $lon = (float)174.78,
+    'lat' => $lat = (float)-41.29
+]
+```
+__$lon__ is the default location's longitude, __$lat__ is it's latitude.
 
 - [Smindel\GIS\Forms\MapField::$default_location](MapField.config.default_location.md) - Location to center empty MapFields and GridFieldMaps to
 
