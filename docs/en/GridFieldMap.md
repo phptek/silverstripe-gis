@@ -16,33 +16,35 @@ This module doesn't come with an admin interface out of the box. But if you are 
 
 app/src/Admin/GISAdmin.php
 
-    <?php
+```php
+<?php
 
-    use SilverStripe\Admin\ModelAdmin;
-    use Smindel\GIS\Forms\GridFieldMap;
-    use Smindel\GIS\GIS;
+use SilverStripe\Admin\ModelAdmin;
+use Smindel\GIS\Forms\GridFieldMap;
+use Smindel\GIS\GIS;
 
-    class GISAdmin extends ModelAdmin
+class GISAdmin extends ModelAdmin
+{
+    private static $url_segment = 'gis';
+
+    private static $menu_title = 'GIS';
+
+    private static $managed_models = [
+        City::class,
+    ];
+
+    public function getEditForm($id = NULL, $fields = NULL)
     {
-        private static $url_segment = 'gis';
+        $form = parent::getEditForm($id, $fields);
 
-        private static $menu_title = 'GIS';
-
-        private static $managed_models = [
-            City::class,
-        ];
-
-        public function getEditForm($id = NULL, $fields = NULL)
-        {
-            $form = parent::getEditForm($id, $fields);
-
-            if (
-                ($geometry = GIS::of($this->modelClass))
-                && ($field = $form->Fields()->dataFieldByName($this->sanitiseClassName($this->modelClass)))
-            ) {
-                $field->getConfig()->addComponent(new GridFieldMap($geometry));
-            }
-
-            return $form;
+        if (
+            ($geometry = GIS::of($this->modelClass))
+            && ($field = $form->Fields()->dataFieldByName($this->sanitiseClassName($this->modelClass)))
+        ) {
+            $field->getConfig()->addComponent(new GridFieldMap($geometry));
         }
+
+        return $form;
     }
+}
+```
