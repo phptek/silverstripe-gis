@@ -4,7 +4,7 @@
 
 ![feature name](../images/WebMapTileService.png)
 
-Markdown for WebMapTileService template description ...
+The configuration of the WebMapTileService applies to all Web Map Tile Services you expose. They can be overwritten in your DataObject classes.
 
 ## Configuration
 
@@ -14,3 +14,21 @@ Markdown for WebMapTileService template description ...
 - [Smindel\GIS\Control\WebMapTileService::$cache_path](WebMapTileService.config.cache_path.md) - Path to the cache directory
 - [Smindel\GIS\Control\WebMapTileService::$cache_ttl](WebMapTileService.config.cache_ttl.md) - Maximum age of cached tiles
 - [Smindel\GIS\Control\WebMapTileService::$default_style](WebMapTileService.config.default_style.md) - Default rendering style
+
+This service is configured through your [DataObject class](#dataobject-setup).
+
+In order to access the endpoint for the tiles you have to use the namespaced class name with the backslashes replaced with dashes:
+
+    http://yourdomain/webmaptileservice/VendorName-ProductName-DataObjectClassName/Z/X/Y.png
+
+If you want to filter records, you can do so by using the configured or default search fields. You can even use filter modifiers:
+
+    .../DataObjectClassName/Z/X/Y.png?FieldName:StartsWith:not=searchTerm
+
+Map frontends like Leaflet or Openlayers usually supply variable names for Z (Zoom), X and Y. For leaflet that would look like this:
+
+```javascript
+L.tileLayer('http://yourdomain/webmaptileservice/City/{z}/{x}/{y}.png').addTo(map);
+```
+
+If you set the special query parameter debug=1 the tile will be rendered with debugging info like borders, Z, X and Y values and the number of records that have been rendered.

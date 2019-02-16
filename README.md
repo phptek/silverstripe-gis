@@ -25,8 +25,8 @@ GIS developer toolkit for SilverStripe
 
 ## Features
 
-- __New field types:__ Geometry field type for DataObjects
-- __New form fields:__ edit the new Geometry type using the MapField or add maps to GridFields in ModelAdmin
+- __New field types:__ geo field types Geometry and Geography for DataObjects
+- __New form fields:__ edit the new geo types using the MapField or add maps to GridFields in ModelAdmin
 - __Configurable projections:__ support for multiple projections through proj4
 - __Primitive and multipart geometries:__ Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon
 - __Developer tools:__ heaps of useful helpers, e.g. for re-projecting, distance measuring, [EWKT](https://postgis.net/docs/manual-2.1/using_postgis_dbmanagement.html#EWKB_EWKT)
@@ -68,6 +68,22 @@ Steps two and three may not be necessary, so you might want to try one and four 
 ## Configuration
 
 silverstripe-gis, like any other SilverStripe module, can be [configured](https://docs.silverstripe.org/en/4/developer_guides/configuration/configuration/) using YAML files, the Config class or private static properties of Configurables. Check out the following sections to see what can be configured.
+
+## Examples and how tos:
+
+- [DataObject Example](docs/en/DataObject-Example.md) - How to set up your own DataObjects
+- [GridFieldMap](docs/en/DataObject-Example.md) - How create a spatially aware admin interface
+- [MapField](docs/en/DataObject-Example.md) - How to edit geo types
+- [ORM Filters](docs/en/ORM-Filters.md) - How to retrieve DataObjects from the db using spatial filters
+
+## API:
+
+- [GIS](docs/en/GIS.md) - Spatial utility class with all sorts of useful helpers
+- [GeoJSONImporter](docs/en/GeoJSONImporter.md) - Import GeoJSON files into the db
+- [GridFieldMap](docs/en/GridFieldMap.md) - GridField component to browse DataObjects by map
+- [MapField](docs/en/MapField.md) - Form field to edit geo types
+- [GeoJSONService](docs/en/GeoJSONService.md) - Expose your DataObjects dynamically in GeoJSON format though an API
+- [WebMapTileService](docs/en/WebMapTileService.md) - Generate map tiles for Leaflet or Openlayers from your DataObjects
 
 
 ## GIS Class
