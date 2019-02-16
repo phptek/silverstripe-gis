@@ -8,6 +8,8 @@ Form field for editing geometries.
 
 ## Configuration
 
+#### Smindel\GIS\Forms\MapField::$default_location
+
 - [Smindel\GIS\Forms\MapField::$default_location](MapField.config.default_location.md) - Location to center empty MapFields and GridFieldMaps to
 
 ## Methods
