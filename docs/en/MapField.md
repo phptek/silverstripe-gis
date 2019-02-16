@@ -20,7 +20,9 @@ Form field for editing geometries.
 
 ### Adding a MapField to an admin form
 
-After adding a new geo type to your DataObjects db fields, the form scaffolder automatically gives you a MapField to your edit form. If you need to add one to your admin form manually e.g. because the form doesn't use the default scaffolder like CMS you can add it to your DataObject like this:
+After adding a new geo type to your DataObjects db fields, the form scaffolder automatically gives you a MapField to your ModelAdmin form. If you need to add one to your admin form manually e.g. because the form doesn't use the default scaffolder like CMS you can add it to your DataObject like this:
+
+app/src/Model/CityPage.php
 
     <?php
 

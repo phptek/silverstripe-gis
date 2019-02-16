@@ -14,8 +14,6 @@ Map component for GridFields
 
 This module doesn't come with an admin interface out of the box. But if you are using [silverstripe-admin](https://github.com/silverstripe/silverstripe-admin/), adding one is simple. Create a ModelAdmin and add the new GridFieldMap component to visualise a DataList on a map:
 
-![GridFieldMap](docs/images/GridFieldMap.png)
-
 app/src/Admin/GISAdmin.php
 
     <?php
