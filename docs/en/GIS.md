@@ -1,8 +1,8 @@
-# ClassName
+# GIS
 
 [Home](../../.) > [API](index.md) > GIS
 
-GIS utility class
+Spatial utility class
 
 ## Configuration
 
