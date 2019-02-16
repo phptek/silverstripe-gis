@@ -4,7 +4,7 @@
 
 ![feature name](../images/MapField.png)
 
-Form field for editing geometries.
+Extends FormField. Form field for editing geo types.
 
 ## Configuration
 
@@ -15,19 +15,30 @@ Location to center empty MapFields and GridFieldMaps to
 ```php
 MapField::$default_location = [
     'lon' => $lon = (float)174.78,
-    'lat' => $lat = (float)-41.29
-]
+    'lat' => $lat = (float)-41.29,
+];
 ```
 - __$lon__ is the default location's longitude as a float
 - __$lat__ is it's latitude as a float
 
 ## Methods
 
-### Smindel\GIS\Forms\MapField::__construct()
+### public function Smindel\GIS\Forms\MapField::setControl(string $shapeType, bool $enabled = true) : Smindel\GIS\Forms\MapField
 
-- [Smindel\GIS\Forms\MapField::__construct()](MapField.method.__construct.md) - Constructor
-- [Smindel\GIS\Forms\MapField::setControl()](MapField.method.setControl.md) - Hide controls for selected shape types
-- [Smindel\GIS\Forms\MapField::setMultiEnabled()](MapField.method.setMultiEnabled.md) - Enable multi geometries like MultiPoint or MultiPolygon
+Hide controls for selected shape types
+
+- __$shapeType__ Leaflet shape type, Note: those are different from the GIS shapes
+- __$enabled__ whether to enable or disable the control in the widget
+
+Returns the MapField instance for chaining
+
+### public function Smindel\GIS\Forms\MapField::enableMulti($enable = true)
+
+Enable multi geometries like MultiPoint or MultiPolygon
+
+- __$enable__ whether to enable or disable the control in the widget
+
+Returns the MapField instance for chaining
 
 ## Examples
 
