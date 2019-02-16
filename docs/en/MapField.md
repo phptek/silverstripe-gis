@@ -48,20 +48,22 @@ After adding a new geo type to your DataObjects db fields, the form scaffolder a
 
 app/src/Model/CityPage.php
 
-    <?php
+```php
+<?php
 
-    use Smindel\GIS\Forms\MapField;
+use Smindel\GIS\Forms\MapField;
 
-    class CityPage extends Page
+class CityPage extends Page
+{
+    private static $db = [
+        'Location' => 'Geometry',
+    ]
+
+    public function getCMSFields()
     {
-        private static $db = [
-            'Location' => 'Geometry',
-        ]
-
-        public function getCMSFields()
-        {
-            $fields = parent::getCMSFields();
-            $fields->addFieldToTab('Root.Main', MapField::create('Location'), 'Content');
-            return $fields;
-        }
+        $fields = parent::getCMSFields();
+        $fields->addFieldToTab('Root.Main', MapField::create('Location'), 'Content');
+        return $fields;
     }
+}
+```
