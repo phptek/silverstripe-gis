@@ -12,6 +12,8 @@ Form field for editing geometries.
 
 ## Methods
 
+### Smindel\GIS\Forms\MapField::__construct()
+
 - [Smindel\GIS\Forms\MapField::__construct()](MapField.method.__construct.md) - Constructor
 - [Smindel\GIS\Forms\MapField::setControl()](MapField.method.setControl.md) - Hide controls for selected shape types
 - [Smindel\GIS\Forms\MapField::setMultiEnabled()](MapField.method.setMultiEnabled.md) - Enable multi geometries like MultiPoint or MultiPolygon
