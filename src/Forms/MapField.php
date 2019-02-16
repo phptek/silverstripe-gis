@@ -87,7 +87,7 @@ class MapField extends FormField
         return json_encode(Config::inst()->get(MapField::class, 'default_location'));
     }
 
-    public function setMultiEnabled($enable)
+    public function enableMulti($enable)
     {
         $this->multiEnabled = $enable;
         return $this;

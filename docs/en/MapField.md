@@ -28,7 +28,7 @@ app/src/Model/CityPage.php
 
     use Smindel\GIS\Forms\MapField;
 
-    class CityPage
+    class CityPage extends Page
     {
         private static $db = [
             'Location' => 'Geometry',
