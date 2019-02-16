@@ -12,12 +12,13 @@ Form field for editing geometries.
 
 ## Methods
 
+- [Smindel\GIS\Forms\MapField::__construct()](MapField.method.__construct.md) - Constructor
 - [Smindel\GIS\Forms\MapField::setControl()](MapField.method.setControl.md) - Hide controls for selected shape types
-- [Smindel\GIS\Forms\MapField::setMultiEnabled()](MapField.method.setMultiEnabled.md) - Enable multi geometries like MultiPoint, MultiLineString or MultiPolygon
+- [Smindel\GIS\Forms\MapField::setMultiEnabled()](MapField.method.setMultiEnabled.md) - Enable multi geometries like MultiPoint or MultiPolygon
 
 ## Examples
 
-### Adding a MapField to a admin form
+### Adding a MapField to an admin form
 
 After adding a new geo type to your DataObjects db fields, the form scaffolder automatically gives you a MapField to your edit form. If you need to add one to your admin form manually e.g. because the form doesn't use the default scaffolder like CMS you can add it to your DataObject like this:
 

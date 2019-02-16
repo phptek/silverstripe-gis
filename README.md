@@ -84,7 +84,7 @@ __Methods:__
   Re-projects a geometry in $array representation to the given $srid
 - `array GIS::to_array(string $ewkt)`
   Transforms a geometry in $ewkt representation into array representation
-- `string GIS::array_to_ewkt(array $array)`
+- `string GIS::array_to_ewkt(array $array, $srid = null, $useBestGuess)`
   Transforms a geometry in $array representation into eWKT representation
 - `string GIS::of(string $dataobjectClass)`
   Returns the name of the geometry property of the given dataobjectClass
@@ -162,7 +162,7 @@ After adding a new geo type to your DataObjects db fields, the form scaffolder a
 
 ![MapField](docs/images/MapField.png)
 
-It supports editing the geo types POINT, LINESTRING and POLYGON. You can deactivate types you don't want to support in your DataObject:
+It supports editing the geo types POINT, LINESTRING and POLYGON and their multiples. You can deactivate types you don't want to support in your DataObject:
 
     public function getCMSFields()
     {
